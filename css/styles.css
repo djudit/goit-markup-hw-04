@@ -78,6 +78,9 @@ img {
 
 .header-section {
   border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header {
@@ -111,7 +114,7 @@ img {
   border-radius: 2px;
   background-color: transparent;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 }
 
@@ -164,7 +167,7 @@ img {
 /* hero */
 
 .hero {
-  min-width: 1440px;
+  max-width: 1440px;
   background-color: var(--dark-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -238,6 +241,10 @@ img {
   border-radius: 4px;
   padding: 24px 100px;
   margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
 }
 
 .benefit-title {
@@ -341,6 +348,10 @@ img {
   background-color: var(--pressed-state-color);
 }
 
+.icon-svg {
+  fill: var(--light-color);
+}
+
 /* Customers */
 
 .customers-list {
@@ -355,6 +366,7 @@ img {
 }
 
 .customers-item {
+  flex-basis: calc((100% - 120px) / 6);
   border-radius: 4px;
   border: 1px solid var(--subtle-text-color);
   padding: 16px 32px;
@@ -374,6 +386,7 @@ img {
 
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 
 .logo-box {
