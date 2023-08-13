@@ -330,10 +330,10 @@ img {
   justify-content: center;
 }
 
-.social-icon {
+/* .social-icon {
   width: 40px;
   height: 40px;
-}
+} */
 
 .social-link {
   background-color: var(--primary-brand-color);
@@ -433,7 +433,8 @@ padding-bottom: 0;
   gap: 16px;
 }
 
-.footer .social-link:hover {
+.footer .social-link:hover,
+.footer .social-link:focus {
   background-color: var(--success-color);
 }
 
@@ -515,6 +516,7 @@ padding-bottom: 0;
 
 .overlay {
   background-color: var(--primary-brand-color);
+  color: var(--light-color);
   display: flex;
   justify-content: center;
   padding: 40px 32px;
@@ -525,10 +527,6 @@ padding-bottom: 0;
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms var(--transition-cub);
-}
-
-.overlay-txt {
-  color: var(--light-color);
 }
 
 .portfolio-img-item:hover .overlay {
@@ -579,7 +577,7 @@ padding-bottom: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 250ms var(--transition-cub), opacity 250ms var(--transition-cub);
+  transition: transform 250ms var(--transition-cub);
 }
 
 .backdrop.is-hidden .modal {
@@ -607,4 +605,12 @@ padding-bottom: 0;
 .modal-btn:focus {
   background-color: var(--pressed-state-color);
   border: none;
+}
+
+.modal-btn-icon {
+  transition: fill 250ms var(--transition-cub);
+}
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  fill: var(--white-background-color);
 }
