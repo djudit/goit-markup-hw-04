@@ -118,8 +118,13 @@ img {
   left: 0;
 }
 
+.current {
+  color: var(--pressed-state-color);
+}
+
 .menu-item.current::after {
   background-color: var(--pressed-state-color);
+  color: var(--pressed-state-color);
 }
 
 .logo {
@@ -346,7 +351,8 @@ img {
   padding: 12px;
   transition: background-color 250ms var(--transition-cub);
 }
-.team .social-link:hover {
+.team .social-link:hover,
+.team .social-link:focus {
   background-color: var(--pressed-state-color);
 }
 
@@ -386,12 +392,17 @@ img {
   align-items: center;
   color: var(--subtle-text-color);
   padding: 16px 32px;
-  transition: border 250ms var(--transition-cub);
+  transition: border-color 250ms var(--transition-cub),
+    color 250ms var(--transition-cub);
 }
 .customers-link:hover,
 .customers-link:focus {
   border: 1px solid var(--pressed-state-color);
   color: var(--pressed-state-color);
+}
+
+.customers-icon {
+  fill: currentColor;
 }
 
 /* Footer */
@@ -498,7 +509,8 @@ img {
   flex-basis: calc((100% - 48px) / 3);
   transition: box-shadow 250ms var(--transition-cub);
 }
-.portfolio-img-item:hover {
+.portfolio-img-item:hover,
+.portfolio-img-item:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -536,7 +548,7 @@ img {
 
 .portfolio-img-item:hover .overlay,
 .portfolio-img-item:focus .overlay {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 
 .portfolio-description {
