@@ -551,6 +551,10 @@ img {
   transform: translateY(0%);
 }
 
+.portfolio-img-item:focus .overlay {
+  transform: translateY(0%);
+}
+
 .portfolio-description {
   padding-left: 16px;
   border: 1px solid var(--accent-color);
