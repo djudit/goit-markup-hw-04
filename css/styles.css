@@ -546,7 +546,10 @@ img {
   transition: transform 250ms var(--transition-cub);
 }
 
-.portfolio-img-item:hover .overlay,
+.portfolio-img-item:hover .overlay {
+  transform: translateY(0%);
+}
+
 .portfolio-img-item:focus .overlay {
   transform: translateY(0%);
 }
